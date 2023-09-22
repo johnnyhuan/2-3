@@ -17,11 +17,12 @@ int main(){
     if(t==2)
         k-=10;
     n=k*q/100-b;
-    
+
     if(n<=0&&m<=0)
         printf("giveup");
-    else if(n<=m&&n>=0)
+    else if(n>=m&&n>=0)
         printf("TOZ8 %d",n);
     else
         printf("SVT40 %d",m);
+    return 0;
 }
