@@ -1,31 +1,31 @@
-## P3 退伍的狙擊手 ##
-在森林中值錢的獵物有兩種 bear和deer 每隻有不同的價值，
-有一位曾經叱吒沙場的狙擊手 他有2把狙擊槍 
-SVT40 TOZ8  射程為 x y 每顆子彈價格為 a b
-TOZ8的射程較遠 子彈也較貴<br>
-打獵時若獵物在射程以內的話基礎命中率為90%，在射程外的基礎命中率為(90-超出的射程*1)%，但是SVT40特別適合射擊bear 命中率上升10%（原本90%會上升到100%），而TOZ8特別不適合射擊deer 命中率下降10%（原本90%會下降到80%）
-(若命中率降至0%以下則當作0%)<br>
-因為兩把槍子彈的價格不一樣 為了讓自己賺錢， 所以他決定計算每次射擊的收益期望值=獵物價值乘以命中率-子彈價格，當兩把槍的收益期望值皆小於等於0即放棄此獵物 <br>
-今天狙擊手看到了一個獵物，可以幫他找出選哪把槍的收益期望值最高嗎?並算出他的收益期望值是多少(若兩把槍枝收益期望值相同，選擇命中率較高的槍枝)<br>
+## P3 Hunting in another world ##
+The valuable monster in the forest consists of two types: unicorn and dragon, each with different profits. A skilled sniper with two rifles, SVT40 and TOZ8, is in the hunting game. The rifles have different ranges (x and y) and bullet prices (a and b). TOZ8 has a longer range and more expensive bullets.<br>
+
+When hunting, if the monster is within the rifle's range, the base hit rate is 90%. If the monster is outside the range, the base hit rate is (90 - range exceeded * 1)%. However, SVT40 is particularly effective for shooting unicorn, with a 10% increase in hit rate (eg:from 90% to 100%), while TOZ8 is not suitable for shooting dragon, with a 10% decrease in hit rate (eg:from 90% to 80%). (If the hit rate drops below 0%, it's considered as 0%.)<br>
+
+Because the two rifles have different bullet prices, the sniper wants to maximize his profit by calculating the expected profit of each shot, which is the monster's profit multiplied by the hit rate minus the bullet price. He will give up on hunting if both rifles' expected profits are less than or equal to 0.<br>
+
+Today, the sniper spotted a monster. Can you help him determine which rifle has the highest expected profit? Also, calculate what his expected profit is. If both rifles have the same expected profit, he will choose the rifle with the higher hit rate.<br>
 ## Input Format ##
-第一行為兩個整數 SVT40 TOZ8 的射程 `x y`<br>
-第二行為兩個整數 SVT40 TOZ8 每顆子彈的價格 `a b`<br>
-第三行為三個整數 發現的`獵物種類t`(t=1代表bear,t=2代表deer)`獵物價值q`獵物距離狙擊手的`直線距離d`<br>
+The first line consists of two integers, the ranges of SVT40 and TOZ8: `x y`.<br>
+The second line consists of two integers, the price per bullet for SVT40 and TOZ8: `a b`<br>
+The third line consists of three integers: the type of monster `t` (where t=1 represents a unicorn and t=2 represents a dragon), the profit of the monster `q`, and the linear distance from the sniper to the monster `d`. <br>
 ## Output Format ##
-若存在至少一把槍的收益期望值>0，
-則輸出收益期望值較高的`槍枝名稱`與此槍枝的`收益期望值`
-輸出`一列字串` `一個整數`
-(若兩把槍枝收益期望值相同，選擇命中率較高的槍枝)<br>
-若不存在任意一把槍的收益期望值>0則輸出`giveup`
+If there is at least one rifle with an expected profit greater than 0, then output the name of the rifle with the higher expected profit and its corresponding expected profit as:<br>
+
+`string` (Rifle Name)`integer` (Expected Profit)
+
+If both rifles have the same expected profit, choose the rifle with the <br>higher hit rate.
+
+If there are no rifles with an expected profit greater than 0, then output`giveup`.<br>
 ## Constraints ##
-x<y, a<b, q=100n n屬於Z<br>
-all input int<10^6
+x<y, a<b, q=100n (n belongs to the set of integers)<br>
+0<all input int<10^6<br>
 ## Sample Input ##
 ```
 400 500
 100 200
 1 200 300
-
 ```
 ## Sample Output ##
 ```
